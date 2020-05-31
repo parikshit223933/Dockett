@@ -42,7 +42,7 @@
 </head>
 
 <body>
-    <form class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 bg-light opacity-9 pb-0">
+    <form action="/create-task" method="POST" class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 bg-light opacity-9 pb-0">
         <section id="title">
             <h1 class="text-secondary text-center"><i class="fas fa-pencil-alt" style="color:#ff2a6a"></i>
                 Dockett -TODO App</h1>
@@ -54,7 +54,7 @@
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"
-                    placeholder="What do you need to do?"></textarea>
+                    placeholder="What do you need to do?" name="Description"></textarea>
             </div>
         </section>
 
@@ -62,7 +62,7 @@
 
         <section id="two-dropdowns" class="text-center">
             <div class="input-group category-chooser">
-                <select class="custom-select bg-light" id="inputGroupSelect01">
+                <select class="custom-select bg-light" id="inputGroupSelect01" name="Category">
                     <option selected>Choose a Category</option>
                     <option value="Personal">Personal</option>
                     <option value="Work">Work</option>
@@ -72,13 +72,13 @@
                 </select>
             </div>
             <div class="vertical-line"></div>
-            <input type="text" id="my_date_picker" placeholder="Due Date">
+            <input type="text" id="my_date_picker" placeholder="Due Date" name="Due_Date">
         </section>
 
         <hr class="mt-2 mb-3">
 
         <section id="task-action" class="text-center">
-            <button type="button" class="btn btn-success btn-lg m-lg-3 m-sm-2 mb-3"><i class="fas fa-plus"></i> ADD
+            <button type="submit" class="btn btn-success btn-lg m-lg-3 m-sm-2 mb-3"><i class="fas fa-plus"></i> ADD
                 TASK</button>
             <button type="button" class="btn btn-danger btn-lg m-lg-3 m-sm-2 mb-3"><i class="far fa-trash-alt"></i>
                 DELETE
@@ -86,18 +86,17 @@
         </section>
 
         <section id="tasks">
-
+            <%for (let t of task_list){%>
             <div class="task pl-2">
                 <hr class="mb-3 mt-3">
                 <div class="custom-control custom-checkbox position-relative">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label font-weight-bold" for="customCheck1">Check this custom
-                        checkbox</label>
-                    <div class="d-block text-muted"><i class="fas fa-calendar-alt"></i> May 2, 2019</div>
-                    <div class="logo btn position-absolute btn-primary disabled">Personal</div>
+                    <label class="custom-control-label font-weight-bold" for="customCheck1"><%=t.Description%></label>
+                    <div class="d-block text-muted"><i class="fas fa-calendar-alt"></i> <%=t.Due_Date%></div>
+                    <div class="logo btn position-absolute btn-primary disabled"><%=t.Category%></div>
                 </div>
             </div>
-
+            <%}%>
         </section>
     </form>
 
