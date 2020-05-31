@@ -30,12 +30,31 @@ input[placeholder="Due Date"]
     border:none;
     font-size:20px;
     margin-top:10px;
-    width:20%;
-    min-width: 106px;
+    width:35%;
+    min-width: 125px;
     vertical-align: middle;
     overflow:visible;
+    padding:10px;
+}
+input[placeholder="Due Date"]:focus
+{
+    outline-color: rgba(0, 132, 255, 0.4);
 }
 #task-action>button
 {
-    font-size:25px;
+    font-size:20px;
+}
+#tasks
+{
+    
+    max-height:48vh;
+    overflow:scroll;
+}
+#tasks::-webkit-scrollbar
+{
+    visibility: hidden;
+}
+.task
+{
+    position:relative;
 }
