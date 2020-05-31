@@ -1,60 +1,63 @@
-body, html
-{
-    margin:0px;
-    height:100vh;
-    width:100vw;
-    box-sizing: border-box;
+body,
+html {
+	margin: 0px;
+	height: 100vh;
+	width: 100vw;
+	box-sizing: border-box;
 }
-.opacity-9
-{
-    opacity:0.9;
+.opacity-9 {
+	opacity: 0.9;
 }
-.vertical-line
-{
-    width:1px;
-    height:50px;
-    background-color:rgba(87, 87, 87, 0.5);
-    display: inline-block;
-    vertical-align: middle;
-    margin-right:5px;
-    margin-left:5px;
-    padding:0px;
+.category-chooser {
+	display: inline-block;
+	width: 30%;
+	min-width: 175px;
 }
-.dropdown-menu
-{
-    width:100%;
+.input-group > .custom-select {
+	width: 100%;
 }
-input[placeholder="Due Date"]
-{
-    border:none;
-    font-size:20px;
-    margin-top:10px;
-    width:35%;
-    min-width: 125px;
-    vertical-align: middle;
-    overflow:visible;
-    padding:10px;
+.logo {
+	top: 13%;
+	right: 0%;
 }
-input[placeholder="Due Date"]:focus
-{
-    outline-color: rgba(0, 132, 255, 0.4);
+.custom-control-label {
+	max-width: 80%;
 }
-#task-action>button
-{
-    font-size:20px;
+@media screen and (max-width:600px) {
+	.custom-control-label {
+		max-width: 70%;
+	}
 }
-#tasks
-{
-    
-    max-height:48vh;
-    overflow:scroll;
+.vertical-line {
+	width: 1px;
+	height: 50px;
+	background-color: rgba(87, 87, 87, 0.5);
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-left: 5px;
+	padding: 0px;
 }
-#tasks::-webkit-scrollbar
-{
-    visibility: hidden;
+input[placeholder="Due Date"] {
+	border: none;
+	font-size: 20px;
+	margin-top: 10px;
+	width: 35%;
+	min-width: 125px;
+	vertical-align: middle;
+	overflow: visible;
+	padding: 10px;
 }
-.logo
-{
-    top:13%;
-    right:0%;
+input[placeholder="Due Date"]:focus {
+	outline-color: rgba(0, 132, 255, 0.4);
+}
+#task-action > button {
+	font-size: 20px;
+}
+#tasks {
+	max-height: 48vh;
+	overflow: scroll;
+}
+#tasks::-webkit-scrollbar {
+	visibility: hidden;
 }

@@ -61,18 +61,15 @@
         <hr class="mt-0 mb-2">
 
         <section id="two-dropdowns" class="text-center">
-            <div class="btn-group">
-                <button type="button" class="btn btn-white dropdown-toggle btn-lg" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Choose a Category
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Personal</a>
-                    <a class="dropdown-item" href="#">Work</a>
-                    <a class="dropdown-item" href="#">School</a>
-                    <a class="dropdown-item" href="#">Cleaning</a>
-                    <a class="dropdown-item" href="#">Other</a>
-                </div>
+            <div class="input-group category-chooser">
+                <select class="custom-select bg-light" id="inputGroupSelect01">
+                    <option selected>Choose a Category</option>
+                    <option value="1">Personal</option>
+                    <option value="2">Work</option>
+                    <option value="3">School</option>
+                    <option value="3">Cleaning</option>
+                    <option value="3">Other</option>
+                </select>
             </div>
             <div class="vertical-line"></div>
             <input type="text" id="my_date_picker" placeholder="Due Date">
