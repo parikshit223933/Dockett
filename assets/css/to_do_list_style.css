@@ -5,3 +5,7 @@ body, html
     width:100vw;
     box-sizing: border-box;
 }
+.opacity-9
+{
+    opacity:0.9;
+}
