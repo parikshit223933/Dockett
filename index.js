@@ -11,7 +11,11 @@ app.use(express.static('assets'));
 
 app.get('/', function(req, res)
 {
-    return res.end('<h1>Hello mamasita</h1>');
+    var options=
+    {
+        title:"Dockett"
+    }
+    return res.render('to_do_list.ejs', options);
 });
 
 
