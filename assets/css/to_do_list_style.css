@@ -9,3 +9,33 @@ body, html
 {
     opacity:0.9;
 }
+.vertical-line
+{
+    width:1px;
+    height:50px;
+
+    background-color:rgba(87, 87, 87, 0.5);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:5px;
+    margin-left:5px;
+    padding:0px;
+}
+.dropdown-menu
+{
+    width:100%;
+}
+input[placeholder="Due Date"]
+{
+    border:none;
+    font-size:20px;
+    margin-top:10px;
+    width:20%;
+    min-width: 106px;
+    vertical-align: middle;
+    overflow:visible;
+}
+#task-action>button
+{
+    font-size:25px;
+}
