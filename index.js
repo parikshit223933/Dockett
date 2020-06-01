@@ -31,7 +31,6 @@ app.get('/', function (req, res)
 });
 app.post('/create-task', function (req, res)
 {
-    console.log(req.body);
     tasks.create(req.body, (error, new_task) =>
     {
         if (error)
@@ -39,13 +38,11 @@ app.post('/create-task', function (req, res)
             console.log('error in creating a task!');
             return;
         }
-        console.log('*********', new_task);
         return res.redirect('back');
     });
 });
 app.get('/delete-tasks/', function(req, res)
 {
-    console.log(req.query);
     let ids=new Array();
     for(let i in req.query)
     {
