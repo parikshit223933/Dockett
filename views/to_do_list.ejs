@@ -83,20 +83,20 @@
     <section id="task-action" class="text-center col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 bg-light opacity-9 pb-0">
         <button type="submit" form="main" class="btn btn-success btn-lg m-lg-3 m-sm-2 mb-3 mt-3"><i class="fas fa-plus"></i> ADD
             TASK</button>
-        <button type="submit" form="tasks" class="btn btn-danger btn-lg m-lg-3 m-sm-2 mb-3 mt-3"><i
+        <a href="" class="btn btn-danger btn-lg m-lg-3 m-sm-2 mb-3 mt-3"><i
                 class="far fa-trash-alt"></i>
             DELETE
-            TASKS</button>
+            TASKS</a>
     </section>
 
 
-    <form id="tasks" method="GET" action="/delete-tasks" class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 bg-light opacity-9 pb-0">
+    <form id="tasks" method="GET" action="" class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 bg-light opacity-9 pb-0">
         <%let count=0;for (let t of task_list){%>
         <div class="task pl-2">
             <hr class="mb-3 mt-1">
             <div class="custom-control custom-checkbox position-relative">
                 <input type="checkbox" class="custom-control-input" id="<%=t._id%>">
-                <label class="custom-control-label font-weight-bold" for="<%t._id%>"><%=t.Description%></label>
+                <label class="custom-control-label font-weight-bold" for="<%=t._id%>"><%=t.Description%></label>
                 <div class="d-block text-muted"><i class="fas fa-calendar-alt"></i> <%=t.Due_Date%></div>
                 <div class="logo btn position-absolute btn-primary disabled"><%=t.Category%></div>
             </div>

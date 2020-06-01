@@ -43,9 +43,23 @@ app.post('/create-task', function (req, res)
         return res.redirect('back');
     });
 });
-app.get('/delete-tasks', function(req, res)
+app.get('/delete-tasks/', function(req, res)
 {
-    
+    console.log(req.query);
+    let ids=new Array();
+    for(let i in req.query)
+    {
+        ids.push(req.query[i]);
+    }
+    tasks.deleteMany({_id:{$in:ids}}, function(error)
+    {
+        if(error)
+        {
+            console.log('Unable to delete from the database.');
+            return;
+        }
+        return res.redirect('back');
+    })
 });
 
 
