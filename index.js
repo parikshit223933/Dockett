@@ -43,7 +43,10 @@ app.post('/create-task', function (req, res)
         return res.redirect('back');
     });
 });
-
+app.get('/delete-tasks', function(req, res)
+{
+    
+});
 
 
 app.listen(port, (error) =>
